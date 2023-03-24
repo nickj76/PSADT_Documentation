@@ -1,0 +1,15 @@
+Install:
+
+.\ServiceUI.exe -Process:explorer.exe Deploy-Application.exe -DeploymentType install
+
+Uninstall:
+
+.\ServiceUI.exe -Process:explorer.exe Deploy-Application.exe -DeploymentType uninstall
+
+Detection:
+
+custom script
+
+if (Test-Path "C:\Program Files\Audacity\Audacity.exe") {
+    Write-Host "Found it!"
+}
